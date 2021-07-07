@@ -21,17 +21,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX2193/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelPlusUI stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_FACE_UNLOCK_SUPPORTED := true
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ACORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX2193
+PRODUCT_NAME := aosp_RMX2193
 PRODUCT_DEVICE := RMX2193
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme Narzo 20/7i(EU)
 PRODUCT_MANUFACTURER := realme
 
-TARGET_BOOT_ANIMATION_RES := 720
+# PixelPlusUI OFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.ppui.device_name=Realme-Narzo-20/7i(EU) \
+    ro.ppui.version=3.6 \
+    ro.ppui.version_code=Unicorn \
+    ro.ppui.is_official=true \
+    ro.ppui.maintainer_name=Abhishek-Sarthak
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
