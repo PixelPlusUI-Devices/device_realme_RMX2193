@@ -40,8 +40,8 @@ PRODUCT_MANUFACTURER := realme
 # PixelPlusUI OFFICIAL
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.ppui.device_name=Realme-Narzo-20/7i(EU) \
-    ro.ppui.version=3.7 \
-    ro.ppui.version_code=Ragnarok \
+    ro.ppui.version=3.8 \
+    ro.ppui.version_code=Hikaru \
     ro.ppui.is_official=true \
     ro.ppui.maintainer_name=Abhishek-Sarthak
 
